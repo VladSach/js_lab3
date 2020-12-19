@@ -468,8 +468,44 @@ body::-webkit-scrollbar-thumb {
     background: var(--secondary-color, white);
 }
 
+@media only screen and (max-width: 1280px) {
+    :root{
+        font-size: 12px;
+    }
 
-@media only screen and (max-width: 600px), only screen and (max-height: 600px) {
+    @keyframes handBoxHid {
+        from {
+            opacity: 0%;
+        }
+    
+        to {
+            opacity: 0%;
+        }
+    }
+
+    .console-image-container {
+        width: 0%;
+    }
+
+    .middle-block {
+        margin: 0;
+        width: 50%;
+    }
+
+    .buying-block {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 482px) {
+    :root{
+        font-size: 14px;
+    }
+
+    main {
+        margin: 0;
+    }
+
     #header {
         height: 0;
     }
@@ -497,11 +533,24 @@ body::-webkit-scrollbar-thumb {
         display: none;
     }
 
-    main {
-        margin: 0;
+    .button_container {
+        width: 100%;
+        font-size: 0.7rem;
     }
-}
 
-@media only screen and (min-width: 600px) {
+    .console-button {
+        width: 100%;
+    }
 
+    footer{
+        margin-left: 0;
+    }
+
+    .cool-links {
+        margin-left: 1rem;
+    }
+    
+    .cool-links-two {
+        margin-left: 1rem;
+    }
 }

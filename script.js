@@ -1,12 +1,19 @@
-window.onscroll = function() {scrollFunction()};
+if (window.screen.width > 482){
+    window.onscroll = function() {scrollFunction()};
+}else{
+        header.style.height = "0px";
+        navbar.style.marginTop = "0px";
+        navbar.style.height = "5rem";
+        navbar.style.width = "100vw";
+}
 
 function scrollFunction() {
     const header = document.getElementById("header");
     const navbar = document.getElementById("navbarID");
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        header.style.height = "0px";
-        navbar.style.marginTop = "0px";
-        navbar.style.height = "100vh";
+            header.style.height = "0px";
+            navbar.style.marginTop = "0px";
+            navbar.style.height = "100vh";
     } else {
         header.style.height = "var(--header-hight)";
         navbar.style.marginTop = "var(--header-hight)";
@@ -30,7 +37,9 @@ function scrollFunction() {
     }
 
     box.style.opacity = '0';
+    
 }
+
 
 const darkButton = document.getElementById('button-theme-dark');
 const lightButton = document.getElementById('button-theme-light');
