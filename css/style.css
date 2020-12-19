@@ -29,6 +29,12 @@
     --primary-dark-color: var(--dark-blue);
 }
 
+html {
+    position: relative;
+    overflow-x: hidden;
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -98,6 +104,7 @@ input[type=text]:focus{
     position: fixed;
     background-color: var(--primary-color);
     transition: width var(--transition-speed) ease;
+    z-index: 100;
     /*overflow: scroll;*/
 }
 
@@ -197,13 +204,61 @@ main {
     height: 50%;
 }
 
+#hand-box{
+    position: relative;
+    animation: none;
+    
+}
+
 
 #left-hand-id {
-
+    position: absolute;
+    width: 40vw;
+    top: -10vh;
+    left:-40vw;
+    animation: none;
 }
 
 #right-hand-id {
-    
+    position: absolute;
+    width: 40vw;
+    top: -10vh;
+    right:-40vw;
+    animation: none;
+}
+
+@keyframes handBoxHid {
+    from {
+        opacity: 100%;
+    }
+
+    25% {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes leftHandOut {
+    from {
+        left:-40vw;
+    }
+
+    to {
+        left:-19vw;
+    }
+}
+
+@keyframes rightHandOut {
+    from {
+        right:-40vw;
+    }
+
+    to {
+        right:-19vw;
+    }
 }
 
 .main-text {
