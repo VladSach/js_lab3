@@ -554,13 +554,22 @@ body::-webkit-scrollbar-thumb {
 
     footer{
         margin-left: 0;
+        height: 10vh;
     }
 
     .cool-links {
+        margin-top: 1rem;
         margin-left: 1rem;
+        font-size: 0.8rem;
     }
     
     .cool-links-two {
-        margin-left: 1rem;
+        display: none;
     }
+
+    .footer-item {
+        margin-right: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
 }
