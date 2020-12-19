@@ -11,7 +11,7 @@
     --dark-blue: #00859A;
 
     --header-hight: 5vh;
-    --navbar-width: 5rem;
+    --navbar-width: 4.4rem;
     --transition-speed: 500ms;
 
     --bg-image: url("../images/background-image.jpg");
@@ -73,7 +73,7 @@ body {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 0.375rem; /* (6px) 6/16 = 0.375 */
-    margin-top: 1vh;
+    margin-top: 0.4vh;
     margin-left: 3vw;
 }
 
@@ -92,7 +92,8 @@ input[type=text]:focus{
     float: left;
     padding: 1vh; /* (12px) 12/16 = 0.75 */
     line-height: 1.5625rem; /* (25px) 25/16 = 1.5625 */
-    border-radius: 0.25rem; /* (4px) 4/16 = 0.25 */
+    border-radius: 0.25rem; /* (4px) 4/16 = 0.25 */   
+    font-weight: bold;
 }
 
 
@@ -337,6 +338,24 @@ main {
     
 }
 
+.console-button {
+    display: inline-flex;
+    height: 5vh;
+    width: 15.5vw;
+    border: 0.15rem solid var(--black);
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--secondary-color);
+    background-color: var(--primary-dark-color);
+}
+
+.console-button:active {
+    border: 0.5rem thick var(--white);
+    background-color: var(--red);
+}
+
 .button_container {
     display: inline-flex;
     text-transform: uppercase;
@@ -350,19 +369,6 @@ main {
     cursor: pointer;
 
     margin: 0 0 3vh 0;
-}
-
-.console-button {
-    display: inline-flex;
-    height: 5vh;
-    width: 15.5vw;
-    border: 0.15rem solid var(--black);
-    text-transform: uppercase;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    color: var(--secondary-color);
-    background-color: var(--primary-dark-color);
 }
 
 .underline {
@@ -382,7 +388,7 @@ main {
 
 .buying-block {
     width: 25%;
-    background-color: var(--blue);
+    background-color: #1B1B1B;
     padding: 1rem;
 
     display: flex;
@@ -393,7 +399,7 @@ main {
 
 #console-ver-cost {
     font-size: 2rem;
-    color: #B12704;
+    color: var(--secondary-color);
 }
 
 #button-buy {
