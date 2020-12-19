@@ -421,6 +421,10 @@ main {
     
 }
 
+#button-buy:focus{
+    outline: none;
+}
+
 /* FOOTER */
 footer{
     height: 13vh;
