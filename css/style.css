@@ -1,0 +1,452 @@
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+
+    --red: #E60012;
+    --white: #FFFFFF;
+    --blue: #00BBD9;
+    --black: #000000;
+    --grey: #484848;
+    --dark-red: #88000B;
+    --dark-blue: #00859A;
+
+    --header-hight: 5vh;
+    --navbar-width: 5rem;
+    --transition-speed: 500ms;
+
+    --bg-image: url("../images/background-image.jpg");
+}
+
+.light{
+    --primary-color: var(--red);
+    --secondary-color: var(--white);
+    --primary-dark-color: var(--dark-red);
+}
+
+.dark {
+    --primary-color: var(--blue);
+    --secondary-color: var(--black);
+    --primary-dark-color: var(--dark-blue);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-dark-color);
+}
+
+
+/* HEADER */
+#header {
+    margin: 0;
+    width: 100vw;
+    height: var(--header-hight);
+    background-color: var(--primary-color);
+
+    overflow: hidden;
+    transition: var(--transition-speed); 
+    position: fixed; 
+}
+
+.headerbar-left {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.nintendo-logo {
+    float: left;
+    height: var(--header-hight);
+    width: 10vw;
+}
+
+.headerbar-left input[type=text] {
+    width: 20vw;
+    border: none;
+    border-bottom: 2px solid var(--primary-dark-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.375rem; /* (6px) 6/16 = 0.375 */
+    margin-top: 1vh;
+    margin-left: 3vw;
+}
+
+input[type=text]:focus{
+    outline: none;
+}
+
+.headerbar-right {
+    float: right;
+    margin-right: 1vw;
+}
+
+.header-item {
+    color: var(--secondary-color);
+    text-decoration: none;
+    float: left;
+    padding: 1vh; /* (12px) 12/16 = 0.75 */
+    line-height: 1.5625rem; /* (25px) 25/16 = 1.5625 */
+    border-radius: 0.25rem; /* (4px) 4/16 = 0.25 */
+}
+
+
+/* NAV */
+.navbar {
+    width: var(--navbar-width);
+    margin-top: var(--header-hight);
+    height: calc(100vh - var(--header-hight));
+    position: fixed;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed) ease;
+    /*overflow: scroll;*/
+}
+
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: var(--navbar-width);
+    text-decoration: none;
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+    background-color: var(--primary-dark-color);
+}
+
+.link-text {
+    display:none;
+    margin-left: 1rem;
+    color: white;
+}
+
+.nav-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1rem;
+}
+
+.navbar:hover {
+    width: 16rem;
+}
+
+.navbar:hover .link-text{
+   display: block;
+}
+
+.nav-svg {
+    fill:white;
+}
+
+#button-theme-dark{
+    width: 100%;
+    background: none;
+    border: none;
+}
+
+#button-theme-light{
+    width: 100%;
+    background: none;
+    border: none;
+}
+
+/* MAIN */
+main {
+    margin-left: var(--navbar-width);
+    z-index: -1;
+}
+
+.banner-container {
+    height: 90vh;
+    background-image: var(--bg-image);
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+     /* Center logo */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.switch-logo {
+    fill:white;
+    width: 50%;
+    height: 50%;
+}
+
+
+#left-hand-id {
+
+}
+
+#right-hand-id {
+    
+}
+
+.main-text {
+    margin: 0;
+    padding: 4vh;
+    text-align: center;
+    background-color: #1B1B1B;
+    color: var(--white);
+}
+
+.photo-grid {
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 240px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 3rem;
+    color: #fff;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    transition: all 500ms;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+}
+
+.console-detail {
+    width: 100%;
+    background-color:  #1B1B1B;
+    display: flex; 
+}
+
+.console-image-container {
+    width: 50%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+#console-image {
+    width: 100%;
+}
+
+.middle-block {
+    width: 25%;
+    background-color: var(--secondary-color);
+    margin-left: 3vw;
+    padding: 1rem;
+}
+
+.choose-your-fighter {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.button_container {
+    display: inline-flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    margin: 0 0 3vh 0;
+}
+
+.console-button {
+    display: inline-flex;
+    height: 5vh;
+    width: 15.5vw;
+    border: 0.15rem solid var(--black);
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--secondary-color);
+    background-color: var(--primary-dark-color);
+}
+
+.underline {
+    width: 100%;
+    height: 0.4vh;
+    align-self: flex-end;
+    left: -50vw;
+    position: absolute;
+    transition: all .3s ease-Out;
+    bottom: 0;
+    background: var(--primary-color);
+}
+  
+.button_container:hover .underline {
+    left: 0;
+}
+
+.buying-block {
+    width: 25%;
+    background-color: var(--blue);
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+#console-ver-cost {
+    font-size: 2rem;
+    color: #B12704;
+}
+
+#button-buy {
+    display: inline-flex;
+    height: 5vh;
+    width: 90%;
+    border: none;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10rem;
+    color: var(--secondary-color);
+    background-color: #FFA41C;
+}
+
+#button-buy:hover {
+    background-color: #FA8800;
+    
+}
+
+/* FOOTER */
+footer{
+    height: 13vh;
+    margin-left: var(--navbar-width);
+}
+
+.cool-links {
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3rem;
+}
+
+.cool-links-two {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3rem;
+    font-size: 0.7rem;
+}
+
+.footer-item {
+    margin-right: 1.5rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.footer-item:hover {
+    text-decoration: underline;
+}
+
+#i-want-to-die {
+    float: right;
+    margin-right: 1rem;
+    font-size: 0.7rem;
+    color: var(--secondary-color);
+}
+
+/* SCROLLBAR */
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+    background: var(--primary-color, red);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--secondary-color, white);
+}
+
+
+@media only screen and (max-width: 600px), only screen and (max-height: 600px) {
+    #header {
+        height: 0;
+    }
+
+    .navbar {
+        width: 100vw;
+        height: 5rem;
+        margin-top: 0;
+    }
+
+    .navbar:hover {
+        width: 100vw;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    
+    .navbar:hover .link-text{
+        display: none;
+    }
+
+    main {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+}
