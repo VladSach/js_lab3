@@ -493,6 +493,15 @@ body::-webkit-scrollbar-thumb {
         width: 50%;
     }
 
+    .button_container {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .console-button {
+        width: 100%;
+    }
+
     .buying-block {
         width: 50%;
     }
